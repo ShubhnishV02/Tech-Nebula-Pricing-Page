@@ -7,32 +7,447 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.nav-stick-position {
+  position: sticky;
+  top: 0%;
+  z-index: 999;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-navbar-section {
+  font-size: 20px;
   display: flex;
-  flex-direction: column;
+  background-color: rgb(247, 245, 245);
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 30px;
+}
+
+.nav-navbar-section a {
+  text-decoration: none;
+  color: black;
+}
+
+.title-logo h2 a {
+  color: rgb(86, 136, 137);
+  font-weight: 800;
+
+}
+
+.nav-navbar-section .nav-items {
+  margin-right: 2rem;
+}
+
+.nav-navbar-section .nav-items a {
+  margin-right: 1.6rem;
+  color: rgb(86, 136, 137);
+  font-weight: 600;
+}
+
+.menu-display-noneForLaptop-blockForMobile i {
+  display: none;
+}
+
+.login-signup-section {
+  margin-right: 2.8rem;
+}
+
+.login-signup-section button,
+.form-search-bar button {
+  background-color: rgb(86, 136, 137);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0px 0.5px 3px black;
+
+}
+
+.login-signup-section button:hover,
+.form-search-bar button:hover {
+  background-color: rgb(149, 200, 201);
+  color: black;
+}
+
+.form-search-bar .mobile-view-only {
+  display: none;
+}
+
+
+.main-heading {
+  font-size: 45px;
+}
+
+.para-main-heading{
+  width: 65%;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.full-bg-color {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/bg-portfolio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.column-divided-into-three-parts {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.column-divided-into-three-parts button:hover {
+  background-color: rgb(149, 200, 201);
+  color: rgb(39, 39, 39);
+  font-weight: 600;
+}
+
+footer h5,
+i {
+  color: rgb(37, 73, 73);
+  font-size: 1.6vw;
+}
+
+footer h2 {
+  color: rgb(37, 73, 73);
+}
+
+/*---------------- divider word line ----------- */
+.divider-line {
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.divider-line::before,
+.divider-line::after {
+  content: '';
+  display: inline-block;
+  width: 33.5%;
+  height: 1px;
+  background-color: #ccc;
+  /* You can change the color to your preference */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.divider-line::before {
+  right: 7.5%;
+}
+
+.divider-line::after {
+  left: 7.5%;
+}
+
+.divider-line3 {
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.divider-line3::before,
+.divider-line3::after {
+  content: '';
+  display: inline-block;
+  width: 32%;
+  height: 1px;
+  background-color: #ccc;
+  /* You can change the color to your preference */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.divider-line3::before {
+  right: 7.5%;
+}
+
+.divider-line3::after {
+  left: 7.5%;
+}
+
+
+
+.column-divided-into-three-parts .column-divided-left {
+  width: 33.5%;
+  border: 2px solid gray;
+  height: 23rem;
+}
+
+.column-divided-into-three-parts .column-divided-left h1 {
+  color: black;
+  box-shadow: 0px 5px 5px black;
+}
+
+.column-divided-into-three-parts .column-divided-left p {
+  font-size: 19px;
+}
+
+.column-divided-into-three-parts .column-divided-left h2 span {
+  font-size: 15px;
+}
+
+.column-divided-into-three-parts .column-divided-left p i {
+  color: orange;
+  font-size: 17px;
+}
+
+.column-divided-left button {
+  color: white;
+  box-shadow: 3px 3px 5px black;
+}
+
+
+.column-divided-into-three-parts .column-divided-middle {
+  width: 33.5%;
+  border: 2px solid gray;
+  height: 23rem;
+}
+
+.column-divided-into-three-parts .column-divided-middle h1 {
+  color: black;
+  box-shadow: 0px 5px 5px black;
+}
+
+.column-divided-into-three-parts .column-divided-middle p {
+  font-size: 19px;
+}
+
+.column-divided-into-three-parts .column-divided-middle p i {
+  color: orange;
+  font-size: 17px;
+}
+
+.column-divided-into-three-parts .column-divided-middle h2 span {
+  font-size: 15px;
+}
+
+.column-divided-middle button {
+  background-color: rgb(86, 136, 137);
+  color: white;
+  box-shadow: 3px 3px 5px black;
+}
+
+
+
+.column-divided-into-three-parts .column-divided-right {
+  width: 33%;
+  border: 2px solid gray;
+  height: 23rem;
+}
+
+.column-divided-into-three-parts .column-divided-right h1 {
+  color: black;
+  box-shadow: 0px 5px 5px black;
+}
+
+.column-divided-into-three-parts .column-divided-right p {
+  font-size: 19px;
+}
+
+.column-divided-into-three-parts .column-divided-right h2 span {
+  font-size: 15px;
+}
+
+.column-divided-into-three-parts .column-divided-right p i {
+  color: orange;
+  font-size: 17px;
+}
+
+.column-divided-right button {
+  background-color: rgb(86, 136, 137);
+  color: white;
+  box-shadow: 3px 3px 5px black;
+}
+
+
+@media screen and (max-width:600px) {
+
+  .nav-navbar-section .nav-items,
+  .form-search-bar,
+  .login-signup-section {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .menu-display-noneForLaptop-blockForMobile i {
+    display: block;
+    font-size: 6vw;
+    color: rgb(86, 136, 137)
   }
+
+  .form-search-bar .mobile-view-only {
+    display: block;
+  }
+
+  .nav-navbar-section {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-heading {
+    font-size: 34px;
+  }
+
+  .para-main-heading{
+    width: 95%;
+    text-align: center;
+    font-size: 13.5px;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bg-color {
+    width: 100%;
+    height: 100%;
+    background-image: url("images/bg-portfolio.jpg");
+    background-repeat: round;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+
+  .column-divided-into-three-parts {
+    width: 100%;
+    display: block;
+    gap: 5px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .column-divided-into-three-parts button:hover {
+    background-color: rgb(149, 200, 201);
+    color: rgb(39, 39, 39);
+    font-weight: 600;
+  }
+
+  .column-divided-into-three-parts .column-divided-left {
+    width: 100%;
+    border: 2px solid white;
+    height: 22rem;
+  }
+
+  .column-divided-into-three-parts .column-divided-left h1 {
+    color: black;
+    box-shadow: 0px 5px 5px black;
+    margin-bottom: 1rem;
+  }
+
+  .column-divided-into-three-parts .column-divided-left h2 span {
+    font-size: 16px;
+  }
+
+  .column-divided-into-three-parts .column-divided-left p i {
+    font-size: 17px;
+    margin-right: 3px;
+  }
+
+  /* ---------------------- */
+
+  .column-divided-into-three-parts .column-divided-middle {
+    width: 100%;
+    border: 2px solid white;
+    height: 22rem;
+    margin-top: 1rem;
+  }
+
+  .column-divided-into-three-parts .column-divided-middle h1 {
+    margin-bottom: 1rem;
+  }
+
+  .column-divided-into-three-parts .column-divided-middle p {
+    font-size: 19px;
+  }
+
+  .column-divided-into-three-parts .column-divided-middle p i {
+    font-size: 17px;
+    margin-right: 3px;
+  }
+
+  .column-divided-into-three-parts .column-divided-middle h2 span {
+    font-size: 16px;
+  }
+
+  /* ------------------ */
+
+  .column-divided-into-three-parts .column-divided-right {
+    width: 100%;
+    border: 2px solid white;
+    height: 22rem;
+    margin-top: 1rem;
+  }
+
+  .column-divided-into-three-parts .column-divided-right h1 {
+    margin-bottom: 1rem;
+  }
+
+  .column-divided-into-three-parts .column-divided-right p {
+    font-size: 19px;
+  }
+
+  .column-divided-into-three-parts .column-divided-right h2 span {
+    font-size: 15px;
+  }
+
+  .column-divided-into-three-parts .column-divided-right p i {
+    color: orange;
+    font-size: 17px;
+  }
+
+  /* ----------------- divider-line ------------------ */
+
+  .divider-line::before,
+  .divider-line::after {
+    width: 18%;
+    height: 1px;
+  }
+
+  .divider-line::before {
+    right: 4%;
+  }
+
+  .divider-line::after {
+    left: 4%;
+  }
+
+  .divider-line3 {
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .divider-line3::before,
+  .divider-line3::after {
+    width: 16%;
+    height: 1px;
+  }
+
+  .divider-line3::before {
+    right: 4%;
+  }
+
+  .divider-line3::after {
+    left: 4%;
+  }
+
+
+  footer h5,
+  i {
+    color: rgb(37, 73, 73);
+    font-size: 6vw;
+  }
+
+  footer h2 {
+    color: rgb(37, 73, 73);
+    font-size: 6.7vw;
+  }
+
+
 }
