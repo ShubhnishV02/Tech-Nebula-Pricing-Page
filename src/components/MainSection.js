@@ -1,10 +1,82 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Box from './box';
 
 class MainSection extends Component {
     constructor(props) {
         super(props)
-        this.props = props;
 
+        this.state = {
+            portfolio: [
+                {
+                    name: "Classic",
+                    price: "3,999",
+                    Feature1: "1-Page Website",
+                    Feature2: "Free SSL",
+                    buttonClass: "btn btn-lg mt-5 w-100 border-secondary",
+                },
+                {
+                    name: "Modern",
+                    price: "5,999",
+                    Feature1: "2-Page Website",
+                    Feature2: "Free SSL",
+                    Feature3: "Free 20 email IDs",
+                    buttonClass: "btn btn-lg mt-4 w-100 border-secondary",
+                },
+            ],
+            BusinessWebsite: [
+                {
+                    name: "Classic",
+                    price: "7,999",
+                    Feature1: "3-Page Website",
+                    Feature2: "Free SSL",
+                    buttonClass: "btn btn-lg mt-5 w-100 border-secondary",
+                },
+                {
+                    name: "Modern",
+                    price: "11,999",
+                    Feature1: "5-Page Website",
+                    Feature2: "Free SSL",
+                    Feature3: "Free 20 email IDs",
+                    buttonClass: "btn btn-lg mt-4 w-100 border-secondary",
+                },
+                {
+                    name: "Super Modern",
+                    price: "19,999",
+                    Feature1: "7-Page Website",
+                    Feature2: "Free SSL",
+                    Feature3: "Free 50 email IDs",
+                    Feature4: "Chatbot",
+                    buttonClass: "btn btn-lg w-100 border-secondary",
+                },
+            ],
+            EcommerceWebsite: [
+                {
+                    name: "Classic",
+                    price: "9,999",
+                    Feature1: "3-Page Website",
+                    Feature2: "Free SSL",
+                    buttonClass: "btn btn-lg mt-5 w-100 border-secondary",
+                },
+                {
+                    name: "Modern",
+                    price: "13,999",
+                    Feature1: "5-Page Website",
+                    Feature2: "Free SSL",
+                    Feature3: "Free 20 email IDs",
+                    buttonClass: "btn btn-lg mt-4 w-100 border-secondary",
+                },
+                {
+                    name: "Super Modern",
+                    price: "21,999",
+                    Feature1: "7-Page Website",
+                    Feature2: "Free SSL",
+                    Feature3: "Free 50 email IDs",
+                    Feature4: "Chatbot",
+                    buttonClass: "btn btn-lg w-100 border-secondary",
+                },
+            ]
+
+        };
     }
 
     render() {
@@ -20,33 +92,10 @@ class MainSection extends Component {
                     </div>
                     <div className='column-divided-into-three-parts container mt-3 mb-1 pt-3 pb-3'>
                         <div className='column-divided-left rounded-3'>
-                            <div>
-                                <h1 className='border-bottom border-top py-3 bg-light rounded-top-3'>Classic</h1>
-                                <h2><span>Rs.</span> 3999</h2>
-                                <p><i className='fa fa-gift'>&nbsp;</i>Features</p>
-                                <ul className='list-unstyled'>
-                                    <li> 1-Page Website</li>
-                                    <li> Free SSL</li>
-                                </ul>
-                                <div className='px-5'>
-                                    <button type='button' className='btn btn-lg mt-5 w-100 border-secondary'>Buy Now</button>
-                                </div>
-                            </div>
+                            <Box name={this.state.portfolio[0].name} price={this.state.portfolio[0].price} Feature1={this.state.portfolio[0].Feature1} Feature2={this.state.portfolio[0].Feature2} Feature3={this.state.portfolio[0].Feature3} buttonClass={this.state.portfolio[0].buttonClass} />
                         </div>
                         <div className='column-divided-middle rounded-3'>
-                            <div>
-                                <h1 className='border-bottom border-top py-3 bg-light rounded-top-3'>Modern</h1>
-                                <h2><span>Rs.</span> 5999</h2>
-                                <p><i className='fa fa-gift'>&nbsp;</i>Features</p>
-                                <ul className='list-unstyled'>
-                                    <li> 2-Page Website</li>
-                                    <li> Free SSL</li>
-                                    <li> Free 10 email IDs</li>
-                                </ul>
-                                <div className='px-5'>
-                                    <button type='button' className='btn btn-lg mt-4 w-100'>Buy Now</button>
-                                </div>
-                            </div>
+                            <Box name={this.state.portfolio[1].name} price={this.state.portfolio[1].price} Feature1={this.state.portfolio[1].Feature1} Feature2={this.state.portfolio[1].Feature2} Feature3={this.state.portfolio[1].Feature3} buttonClass={this.state.portfolio[1].buttonClass} />
                         </div>
                     </div>
 
@@ -56,49 +105,16 @@ class MainSection extends Component {
                     </div>
                     <div className='column-divided-into-three-parts container mt-3 mb-1 pt-2 pb-4'>
                         <div className='column-divided-left rounded-3'>
-                            <div>
-                                <h1 className='border-bottom border-top py-3 bg-light rounded-top-3'>Classic</h1>
-                                <h2><span>Rs.</span> 7999</h2>
-                                <p><i className='fa fa-gift'>&nbsp;</i>Features</p>
-                                <ul className='list-unstyled'>
-                                    <li> 3-Page Website</li>
-                                    <li> Free SSL</li>
-                                </ul>
-                                <div className='px-5'>
-                                    <button type='button' className='btn border-secondary w-100 btn-lg mt-5'>Buy Now</button>
-                                </div>
-                            </div>
+                        <Box name={this.state.BusinessWebsite[0].name} price={this.state.BusinessWebsite[0].price} Feature1={this.state.BusinessWebsite[0].Feature1} Feature2={this.state.BusinessWebsite[0].Feature2} Feature3={this.state.BusinessWebsite[0].Feature3} buttonClass={this.state.BusinessWebsite[0].buttonClass} />
+                        
                         </div>
                         <div className='column-divided-middle rounded-3'>
-                            <div>
-                                <h1 className='border-bottom border-top py-3 bg-light rounded-top-3'>Modern</h1>
-                                <h2><span>Rs.</span> 11999</h2>
-                                <p><i className='fa fa-gift'>&nbsp;</i>Features</p>
-                                <ul className='list-unstyled'>
-                                    <li> 5-Page Website</li>
-                                    <li> Free SSL</li>
-                                    <li> Free 20 email IDs</li>
-                                </ul>
-                                <div className='px-5'>
-                                    <button type='button' className='btn w-100 btn-lg mt-4'>Buy Now</button>
-                                </div>
-                            </div>
+                        <Box name={this.state.BusinessWebsite[1].name} price={this.state.BusinessWebsite[1].price} Feature1={this.state.BusinessWebsite[1].Feature1} Feature2={this.state.BusinessWebsite[1].Feature2} Feature3={this.state.BusinessWebsite[1].Feature3} buttonClass={this.state.BusinessWebsite[1].buttonClass}  />
+                        
                         </div>
                         <div className='column-divided-right rounded-3'>
-                            <div>
-                                <h1 className='border-bottom border-top py-3 bg-body-secondary rounded-top-3'> Super Modern</h1>
-                                <h2><span>Rs.</span> 19999</h2>
-                                <p><i className='fa fa-gift'>&nbsp;</i>Features</p>
-                                <ul className='list-unstyled'>
-                                    <li> 7-Page Website</li>
-                                    <li> Free SSL</li>
-                                    <li> Free 50 email IDs</li>
-                                    <li> Chatbot</li>
-                                </ul>
-                                <div className='px-5'>
-                                    <button type='button' className='btn w-100 btn-lg'>Buy Now</button>
-                                </div>
-                            </div>
+                        <Box name={this.state.BusinessWebsite[2].name} price={this.state.BusinessWebsite[2].price} Feature1={this.state.BusinessWebsite[2].Feature1} Feature2={this.state.BusinessWebsite[2].Feature2} Feature3={this.state.BusinessWebsite[2].Feature3} Feature4={this.state.BusinessWebsite[2].Feature4}  buttonClass={this.state.BusinessWebsite[2].buttonClass}  />
+                        
                         </div>
 
                     </div>
@@ -109,49 +125,16 @@ class MainSection extends Component {
                     </div>
                     <div className='column-divided-into-three-parts container mt-3 mb-1 pt-2 pb-4'>
                         <div className='column-divided-left rounded-3'>
-                            <div>
-                                <h1 className='border-bottom border-top py-3 bg-light rounded-top-3'>Classic</h1>
-                                <h2><span>Rs.</span> 9999</h2>
-                                <p><i className='fa fa-gift'>&nbsp;</i>Features</p>
-                                <ul className='list-unstyled'>
-                                    <li> 1-Page Website</li>
-                                    <li> Free SSL</li>
-                                </ul>
-                                <div className='px-5'>
-                                    <button type='button' className='btn border-secondary w-100 btn-lg mt-5'>Buy Now</button>
-                                </div>
-                            </div>
+                        <Box name={this.state.EcommerceWebsite[0].name} price={this.state.EcommerceWebsite[0].price} Feature1={this.state.EcommerceWebsite[0].Feature1} Feature2={this.state.EcommerceWebsite[0].Feature2} Feature3={this.state.EcommerceWebsite[0].Feature3} Feature4={this.state.EcommerceWebsite[0].Feature4}  buttonClass={this.state.EcommerceWebsite[0].buttonClass}  />
+                        
                         </div>
                         <div className='column-divided-middle rounded-3'>
-                            <div>
-                                <h1 className='border-bottom border-top py-3 bg-light rounded-top-3'>Modern</h1>
-                                <h2><span>Rs.</span> 13999</h2>
-                                <p><i className='fa fa-gift'>&nbsp;</i>Features</p>
-                                <ul className='list-unstyled'>
-                                    <li> 3-Page Website</li>
-                                    <li> Free SSL</li>
-                                    <li> Free 20 email IDs</li>
-                                </ul>
-                                <div className='px-5'>
-                                    <button type='button' className='btn w-100 btn-lg mt-4'>Buy Now</button>
-                                </div>
-                            </div>
+                        <Box name={this.state.EcommerceWebsite[1].name} price={this.state.EcommerceWebsite[1].price} Feature1={this.state.EcommerceWebsite[1].Feature1} Feature2={this.state.EcommerceWebsite[1].Feature2} Feature3={this.state.EcommerceWebsite[1].Feature3} Feature4={this.state.EcommerceWebsite[1].Feature4}  buttonClass={this.state.EcommerceWebsite[1].buttonClass}  />
+                        
                         </div>
                         <div className='column-divided-right rounded-3 mb-5'>
-                            <div>
-                                <h1 className='border-bottom border-top py-3 bg-body-secondary rounded-top-3'>Super Modern</h1>
-                                <h2><span>Rs.</span> 21999</h2>
-                                <p><i className='fa fa-gift'>&nbsp;</i>Features</p>
-                                <ul className='list-unstyled'>
-                                    <li> 7-Page Website</li>
-                                    <li> Free SSL</li>
-                                    <li> Free 50 email IDs</li>
-                                    <li> Chatbot</li>
-                                </ul>
-                                <div className='px-5'>
-                                    <button type='button' className='btn w-100 btn-lg'>Buy Now</button>
-                                </div>
-                            </div>
+                        <Box name={this.state.EcommerceWebsite[2].name} price={this.state.EcommerceWebsite[2].price} Feature1={this.state.EcommerceWebsite[2].Feature1} Feature2={this.state.EcommerceWebsite[2].Feature2} Feature3={this.state.EcommerceWebsite[2].Feature3} Feature4={this.state.EcommerceWebsite[2].Feature4}  buttonClass={this.state.EcommerceWebsite[2].buttonClass}  />
+                        
                         </div>
                     </div>
 
@@ -165,88 +148,3 @@ class MainSection extends Component {
 
 export default MainSection
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <div className='container'>
-                        <div className='row'>
-                            <div className='col-md-4 col-12'>
-                                <div className='card container mt-3 mb-1 pt-3 pb-3'>
-                                    <div className='card-body rounded-3'>
-                                        <div className=''>
-                                            <h1 className='border-bottom border-top py-3 bg-light rounded-top-3'>{this.props.name}</h1>
-                                            <h2><span>Rs.</span> 3999</h2>
-                                            <p><i className='fa fa-gift'>&nbsp;</i>Features</p>
-                                            <ul className='list-unstyled'>
-                                                <li> 1-Page Website</li>
-                                                <li> Free SSL</li>
-                                            </ul>
-                                            <div className='px-5'>
-                                                <button type='button' className='btn btn-lg mt-5 w-100 border-secondary'>Buy Now</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='col-md-4 col-12'>
-                                <div className='card container mt-3 mb-1 pt-3 pb-3'>
-                                    <div className='card-body rounded-3'>
-                                        <div className=''>
-                                            <h1 className='border-bottom border-top py-3 bg-light rounded-top-3'>{this.props.name}</h1>
-                                            <h2><span>Rs.</span> 3999</h2>
-                                            <p><i className='fa fa-gift'>&nbsp;</i>Features</p>
-                                            <ul className='list-unstyled'>
-                                                <li> 1-Page Website</li>
-                                                <li> Free SSL</li>
-                                            </ul>
-                                            <div className='px-5'>
-                                                <button type='button' className='btn btn-lg mt-5 w-100 border-secondary'>Buy Now</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='col-md-4 col-12'>
-                                <div className='card container mt-3 mb-1 pt-3 pb-3'>
-                                    <div className='card-body rounded-3'>
-                                        <div className=''>
-                                            <h1 className='border-bottom border-top py-3 bg-light rounded-top-3'>{this.props.name}</h1>
-                                            <h2><span>Rs.</span> 3999</h2>
-                                            <p><i className='fa fa-gift'>&nbsp;</i>Features</p>
-                                            <ul className='list-unstyled'>
-                                                <li> 1-Page Website</li>
-                                                <li> Free SSL</li>
-                                            </ul>
-                                            <div className='px-5'>
-                                                <button type='button' className='btn btn-lg mt-5 w-100 border-secondary'>Buy Now</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div> */}
